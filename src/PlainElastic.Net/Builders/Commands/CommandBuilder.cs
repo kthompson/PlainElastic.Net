@@ -25,7 +25,7 @@ namespace PlainElastic.Net
 
         public string BuildCommand()
         {
-            string path = BuildUrlPath().ToLower();
+            string path = BuildUrlPath();
             string queryParams = Parameters.Select(param => param.Key + "=" + param.Value).JoinWithSeparator("&");
             
             if (!queryParams.IsNullOrEmpty())
